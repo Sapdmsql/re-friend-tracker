@@ -365,9 +365,9 @@ export class GuiModel {
                     },
                         {
                             "type": "list",
-                            "name": "FriendList",
-                            "icon": "fa-user",
-                            "color": "blue",
+                            "name": "ActivityList",
+                            "icon": "fa-calendar",
+                            "color": "orange",
                             "search": true,
                             "url": "/activity",
                             "page": "activityfriends",
@@ -436,8 +436,8 @@ export class GuiModel {
                     },
                     {
                         "type": "list",
-                        "icon": "fa-calendar",
-                        "color": "orange",
+                        "icon": "fa-user",
+                        "color": "blue",
                         "search": true,
                         "url": "/activity/:activityKey/friend",
                         "form": {
@@ -472,8 +472,8 @@ export class GuiModel {
                     },
                     {
                         "type": "list",
-                        "icon": "fa-home",
-                        "color": "blue",
+                        "icon": "fa-calendar",
+                        "color": "orange",
                         "search": true,
                         "url": "/location/:locationKey/activity ",
                         "form": {
