@@ -93,6 +93,14 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -122,6 +130,28 @@ export class GuiModel {
                             "width": 2
                         },
                         {
+                            "id": "date",
+                            "type": "date",
+                            "name": "Date",
+                            "width": 2
+                        },
+                        {
+                            "id":   "location",
+                            "type": "autocomplete",
+                            "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2
+                        },
+                        {
+                            "id": "comment",
+                            "type": "text",
+                            "name": "Comments",
+                            "width": 2,
+                            "height": 4,
+                            "maxLength": 5000,
+                        },
+                        {
                             "type": "deleteButton",
                             "name": "Delete"
                         },
@@ -148,6 +178,20 @@ export class GuiModel {
                     "required": true
                     },
                     {
+                        "id": "creationdate",
+                        "type": "date",
+                        "name": "CreationDate",
+                        "width": 2
+                    },
+                    {
+                        "id": "comment",
+                        "type": "text",
+                        "name": "Comments",
+                        "width": 2,
+                        "height": 4,
+                        "maxLength": 5000,
+                    },
+                    {
                     "type": "deleteButton",
                     "name": "Delete"
                     },
@@ -158,7 +202,7 @@ export class GuiModel {
                     {
                     "type": "okButton",
                     "name": "Ok"
-                    }
+                    },
                     ]
                    },
             ],
@@ -188,6 +232,14 @@ export class GuiModel {
                             "color": "wisteria",
                             "page": "groupspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Activity",
+                            "icon": "fa-calendar",
+                            "color": "orange",
+                            "page": "activitiespage",
+                           },
+                           
                     ]
                 },
                 {
@@ -268,6 +320,33 @@ export class GuiModel {
                         "url": "/group",
                         "form": {
                         "form": "GroupForm"
+                        }
+                        },
+                    ]
+                   },
+                   {
+                    "id": "activitiespage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": "NewActivity",
+                    "icon": "fa-calendar",
+                    "color": "green",
+                    "form": {
+                    "form": "AddActivityForm"
+                    }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-calendar",
+                        "color": "orange",
+                        "search": true,
+                        "url": "/activity",
+                        "form": {
+                        "form": "AddActivityForm"
                         }
                         },
                     ]
